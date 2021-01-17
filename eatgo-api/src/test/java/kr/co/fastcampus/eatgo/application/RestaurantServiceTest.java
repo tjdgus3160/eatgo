@@ -1,9 +1,6 @@
 package kr.co.fastcampus.eatgo.application;
 
-import kr.co.fastcampus.eatgo.domain.MenuItem;
-import kr.co.fastcampus.eatgo.domain.MenuItemRepository;
-import kr.co.fastcampus.eatgo.domain.Restaurant;
-import kr.co.fastcampus.eatgo.domain.RestaurantRepository;
+import kr.co.fastcampus.eatgo.domain.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -69,7 +66,7 @@ class RestaurantServiceTest {
     }
 
     @Test
-    public void getRestaurant(){
+    public void getRestaurantWithExisted(){
         Restaurant restaurant = restaurantService.getRestaurant(1004L);
 
         assertEquals(restaurant.getId(),1004L);
